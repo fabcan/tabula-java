@@ -112,7 +112,7 @@ public class CommandLineApp {
     public void extractDirectoryTables(CommandLine line, File pdfDirectory) throws ParseException {
         File[] pdfs = pdfDirectory.listFiles(new FilenameFilter() {
             public boolean accept(File dir, String name) {
-                return name.endsWith(".pdf");
+                return name.toLowerCase().endsWith(".pdf");
             }
         });
 
